@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('./reset.css');
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway, sans-serif;
+  color: #000;
+}
+
+.container {
+  max-width: 144rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-padding {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+a {
+  color: #fff;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/*         HEADER       */
+header {
+  min-height: 100dvh;
+  color: #fff;
+  background-image: url(../assets/img/1_hero/JPG/hero_bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+h1 {
+  font-weight: bold;
+  font-size: 9.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+}
+.header-top {
+  height: 11.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+  ul,
+  li {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    gap: 3.2rem;
+  }
+  li {
+    font-size: 2.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    list-style: none;
+  }
+}
+.phone-button {
+  background-color: #9f0908;
+  padding: 0.8rem;
+  border: 0.1rem solid #fff;
+  border-radius: 0.8rem;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  img {
+    margin-right: 0.8rem;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #e73e3c;
+  }
+}
+.logo {
+  aspect-ratio: 1/1;
+  height: 6.4rem;
+}
+.description {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+/*         MAIN       */
+h2 {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #9f0908;
+}
+
+/*         HOW TO ORDER       */
+.order {
+  text-align: center;
+  h2 {
+    margin-bottom: 6.4rem;
+  }
+}
+.order-items-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.order-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20rem;
+  img {
+    aspect-ratio: 1/1;
+    margin-bottom: 1.6rem;
+    height: 12.8rem;
+  }
+  p {
+    font-size: 5.6rem;
+    font-family: Economica, serif;
+    font-weight: bold;
+  }
+}
+
+/*         OUR MENU       */
+#menu {
+  flex: 1;
+  background-image: url(../assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h2 {
+    margin-bottom: 6.4rem;
+  }
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  &:not(:last-child) {
+    margin-bottom: 5.6rem;
+  }
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  img {
+    aspect-ratio: 1/1;
+    height: 35.2rem;
+  }
+  h3 {
+    font-family: Economica, serif;
+    font-size: 5.6rem;
+    font-weight: bold;
+    padding-bottom: 1.6rem;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25rem;
+    padding-bottom: 0.8rem;
+  }
+  span {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #675e54;
+    text-transform: uppercase;
+  }
+}
+
+/*         FIND US AT       */
+#location {
+  padding-top: 12rem;
+  h2 {
+    margin-bottom: 0.8rem;
+  }
+  iframe {
+    width: 100%;
+    height: 50rem;
+    border: none;
+  }
+}
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.location-adress {
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  align-items: center;
+  font-size: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+
+/*         FOOTER       */
+footer {
+  height: 14.4rem;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &>img {
+    content: url('../assets/img/5_section_footer/SVG/sakura_ramen_logo_and_text.svg');
+    height: 4.4rem;
+  }
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  a {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    aspect-ratio: 1/1;
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  /* Main navigation often changes to a burger menu here */
+  h2 {
+    font-size: 6.4rem;
+  }
+  .container-padding {
+    padding-top: 9.6rem;
+    padding-bottom: 9.6rem;
+  }
+  .header-top li {
+    font-size: 2rem;
+  }
+  .header-top li:not(.phone-button) {
+    display: none;
+  }
+  h1 {
+    font-size: 7.2rem;
+    margin-bottom: 2rem;
+  }
+  .order h2 {
+    margin-bottom: 4.8rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .order-item {
+    max-width: 15rem;
+    img {
+      margin-bottom: 0.8rem;
+      height: 11.2rem;
+    }
+    p {
+      font-size: 3.2rem;
+    }
+  }
+  #menu h2 {
+    margin-bottom: 4.8rem;
+  }
+  .menu-item {
+    gap: 2.4rem;
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+    img {
+      height: 35.2rem;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+    li {
+      gap: 20rem;
+    }
+    span {
+      font-size: 2.4rem;
+    }
+  }
+  #location {
+    padding-top: 9.6rem;
+  }
+  .location-adress {
+    font-size: 2rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  /* Elements start to stack vertically for mobile view */
+  .menu-item {
+    img {
+      aspect-ratio: 1/1;
+      height: 32rem;
+    }
+    h3 {
+      font-size: 3.2rem;
+    }
+    li {
+      gap: 15rem;
+    }
+    span {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Final tweaks for small screens like iPhone SE */
+  h2 {
+    font-size: 4rem;
+  }
+  .container-padding {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+  }
+  .header-top {
+    height: 6.4rem;
+  }
+  .header-top li {
+    font-size: 1.6rem;
+  }
+  .logo {
+    aspect-ratio: 1/1;
+    height: 4rem;
+  }
+  h1 {
+    font-size: 4.4rem;
+    margin-bottom: 2rem;
+  }
+  .description {
+    font-size: 1.6rem;
+  }
+
+  .order h2 {
+    margin-bottom: 4rem;
+  }
+  .order-items-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  #menu h2 {
+    margin-bottom: 4rem;
+  }
+  .menu-item {
+    flex-direction: column;
+    &:nth-child(2) {
+      flex-direction: column;
+    }
+    gap: 1.6rem;
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+    img {
+      height: 29rem;
+    }
+    li {
+      gap: 10rem;
+    }
+  }
+
+  #location {
+    padding-top: 7.2rem;
+  }
+  .location-adress {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+  }
+
+  footer {
+    height: 8.6rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &>img {
+      content: url('../assets/img/1_hero/SVG/sakura_logo.svg');
+      height: 4rem;
+    }
+  }
+  .footer-icons {
+    img {
+      height: 3.2rem;
+    }
+  }
+}
