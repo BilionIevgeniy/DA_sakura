@@ -199,10 +199,13 @@ h2 {
 
 /*         FOOTER       */
 footer {
+  display: flex;
+  flex-direction: column;
   height: 14.4rem;
   background-color: #000;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .footer {
   display: flex;
@@ -224,6 +227,15 @@ footer {
   img {
     aspect-ratio: 1/1;
     height: 4rem;
+  }
+}
+
+.recht {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    cursor: pointer;
   }
 }
 
